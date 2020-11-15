@@ -9,5 +9,5 @@ FROM quay.io/keycloak/keycloak
 
 COPY --from=sessionRestrictorBuilder /keycloak-session-restrictor/target/keycloak-session-restrictor-0.0.1-SNAPSHOT.jar /opt/jboss/keycloak/providers/
 
-ENTRYPOINT [ "/opt/jboss/docker-entrypoint.sh" ]
+ENTRYPOINT [ "/opt/jboss/tools/docker-entrypoint.sh" ]
 CMD ["-b", "0.0.0.0"]
